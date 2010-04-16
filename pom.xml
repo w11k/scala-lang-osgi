@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2009-2010 WeigleWilczek and others.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the SCALA LICENSE
+  which is available at http://www.scala-lang.org/node/146.
+-->
+
+<!--
+########################################################################################################################
+Aggregator for scala-lang-osgi
+########################################################################################################################
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--
+  ######################################################################################################################
+  Basics
+  ######################################################################################################################
+  -->
+
+  <parent>
+    <groupId>org.scala-lang-osgi</groupId>
+    <artifactId>scala-lang-osgi-root</artifactId>
+    <version>2.8.0.RC1</version>
+    <relativePath>resources/scala-lang-osgi-root/pom.xml</relativePath>
+  </parent>
+  <artifactId>scala-lang-osgi</artifactId>
+  <packaging>pom</packaging>
+
+  <!--
+  ######################################################################################################################
+  More project information
+  ######################################################################################################################
+  -->
+
+  <name>Aggregator for scala-lang-osgi</name>
+
+  <!--
+  ######################################################################################################################
+  Modules
+  ######################################################################################################################
+  -->
+
+  <modules>
+    <module>resources/scala-lang-osgi-root</module>
+    <module>scala-library</module>
+  </modules>
+
+</project>
