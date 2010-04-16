@@ -25,8 +25,8 @@ Root POM for scala-lang-osgi
   ######################################################################################################################
   -->
 
-  <groupId>org.scala-lang-osgi</groupId>
-  <artifactId>scala-lang-osgi-root</artifactId>
+  <groupId>com.weiglewilczek.scala-lang-osgi</groupId>
+  <artifactId>scala-lang-osgi-parent</artifactId>
   <version>2.8.0.RC1</version>
   <packaging>pom</packaging>
 
@@ -71,8 +71,6 @@ Root POM for scala-lang-osgi
     <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
     <maven.compiler.source>1.5</maven.compiler.source>
     <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-
-    <!-- Specific settings for this project -->
   </properties>
 
   <!--
@@ -166,18 +164,9 @@ Root POM for scala-lang-osgi
           <configuration>
             <instructions>
               <Bundle-RequiredExecutionEnvironment>J2SE-1.5,JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
-              <_versionpolicy>[$(@),$(version;=+;$(@)))</_versionpolicy>
+              <_versionpolicy>[$(@),$(@)]</_versionpolicy>
             </instructions>
           </configuration>
-          <!--executions>
-            <execution>
-              <id>create-bundle</id>
-              <phase>package</phase>
-              <goals>
-                <goal>bundle</goal>
-              </goals>
-            </execution>
-          </executions-->
         </plugin>
       </plugins>
     </pluginManagement>

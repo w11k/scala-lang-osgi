@@ -26,12 +26,12 @@ Aggregator for scala-lang-osgi
   -->
 
   <parent>
-    <groupId>org.scala-lang-osgi</groupId>
-    <artifactId>scala-lang-osgi-root</artifactId>
+    <groupId>com.weiglewilczek.scala-lang-osgi</groupId>
+    <artifactId>scala-lang-osgi-parent</artifactId>
     <version>2.8.0.RC1</version>
-    <relativePath>resources/scala-lang-osgi-root/pom.xml</relativePath>
+    <relativePath>resources/scala-lang-osgi-parent/pom.xml</relativePath>
   </parent>
-  <artifactId>scala-lang-osgi</artifactId>
+  <artifactId>aggregator</artifactId>
   <packaging>pom</packaging>
 
   <!--
@@ -49,7 +49,7 @@ Aggregator for scala-lang-osgi
   -->
 
   <modules>
-    <module>resources/scala-lang-osgi-root</module>
+    <module>resources/scala-lang-osgi-parent</module>
     <module>scala-library</module>
   </modules>
 
