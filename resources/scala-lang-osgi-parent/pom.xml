@@ -179,18 +179,14 @@ Root POM for scala-lang-osgi
   -->
 
   <scm>
-    <connection>scm:git:git://github.com/weiglewilczek/scala-lang-osgi.git</connection>
-    <developerConnection>scm:git:git@github.com:weiglewilczek/scala-lang-osgi.git</developerConnection>
-    <url>http://github.com/weiglewilczek/scala-lang-osgi/tree/master</url>
+    <connection>git://github.com/weiglewilczek/scala-lang-osgi.git</connection>
+    <developerConnection>git@github.com:weiglewilczek/scala-lang-osgi.git</developerConnection>
+    <url>http://github.com/weiglewilczek/scala-lang-osgi</url>
   </scm>
   <issueManagement>
     <system>github</system>
-    <url>http://github.com/weiglewilczek/scala-lang-osgi/issues/</url>
+    <url>http://github.com/weiglewilczek/scala-lang-osgi/issues</url>
   </issueManagement>
-  <ciManagement>
-    <system>Hudson</system>
-    <url>http://hudson.scala-tools.org/job/scala-lang-osgi/</url>
-  </ciManagement>
   <distributionManagement>
     <repository>
       <id>nexus.scala-tools.org</id>
