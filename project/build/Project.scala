@@ -29,6 +29,7 @@ class ScalaLangOsgiParentProject(info: ProjectInfo) extends ParentProject(info) 
       Nil
     override lazy val bndNoUses = true
     override lazy val bndClasspath = Path fromFile buildScalaInstance.libraryJar
+    override lazy val bndOutput = super.bndOutput // Make it visible for ScalaCompilerProject!
   }
 
   /** scala-compiler subproject */
@@ -37,7 +38,6 @@ class ScalaLangOsgiParentProject(info: ProjectInfo) extends ParentProject(info) 
       "scala.tools.nsc.*;version=%s".format(projectVersion.value) ::
       Nil
     override lazy val bndImportPackage =
-      "scala.*;version=%s".format(projectVersion.value) ::
       "sun.*;resolution:=optional" ::
       "jline.*;resolution:=optional" ::
       "org.apache.tools.ant.*;resolution:=optional" ::
@@ -49,7 +49,7 @@ class ScalaLangOsgiParentProject(info: ProjectInfo) extends ParentProject(info) 
     override lazy val bndRequireBundle =
       "%s;bundle-version=%s".format(scalaLibraryProject.bndBundleSymbolicName, projectVersion.value) ::
       Nil
-    override lazy val bndClasspath = Path fromFile buildScalaInstance.compilerJar
+    override lazy val bndClasspath = (Path fromFile buildScalaInstance.compilerJar) +++ scalaLibraryProject.bndOutput
   }
 }
 
