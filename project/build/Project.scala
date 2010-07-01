@@ -17,30 +17,39 @@ class ScalaLangOsgiParentProject(info: ProjectInfo) extends ParentProject(info) 
 
   /** scala-library subproject */
   class ScalaLibraryProject(info: ProjectInfo) extends ScalaLangOsgiBaseProject(info) {
-    override lazy val bndExportPackage        = "scala.*;version=%s".format(projectVersion.value) ::
-                                                Nil
-    override lazy val bndImportPackage        = "sun.*;resolution:=optional" ::
-                                                "*" ::
-                                                Nil
-    override lazy val bndDynamicImportPackage = "*" ::
-                                                Nil
-    override lazy val bndNoUses               = true
-    override lazy val bndClasspath            = Path fromFile buildScalaInstance.libraryJar
+    override lazy val bndExportPackage =
+      "scala.*;version=%s".format(projectVersion.value) ::
+      Nil
+    override lazy val bndImportPackage =
+      "sun.*;resolution:=optional" ::
+      "*" ::
+      Nil
+    override lazy val bndDynamicImportPackage =
+      "*" ::
+      Nil
+    override lazy val bndNoUses = true
+    override lazy val bndClasspath = Path fromFile buildScalaInstance.libraryJar
   }
 
   /** scala-compiler subproject */
   class ScalaCompilerProject(info: ProjectInfo) extends ScalaLangOsgiBaseProject(info) {
-    override lazy val bndExportPackage        = "scala.tools.nsc.*;version=%s".format(projectVersion.value) ::
-                                                Nil
-    override lazy val bndImportPackage        = "scala.*;version=%s".format(projectVersion.value) ::
-                                                "sun.*;resolution:=optional" ::
-                                                "jline.*;resolution:=optional" ::
-                                                "org.apache.tools.ant.*;resolution:=optional" ::
-                                                "*" ::
-                                                Nil
-    override lazy val bndDynamicImportPackage = "*" ::
-                                                Nil
-    override lazy val bndClasspath            = Path fromFile buildScalaInstance.compilerJar
+    override lazy val bndExportPackage =
+      "scala.tools.nsc.*;version=%s".format(projectVersion.value) ::
+      Nil
+    override lazy val bndImportPackage =
+      "scala.*;version=%s".format(projectVersion.value) ::
+      "sun.*;resolution:=optional" ::
+      "jline.*;resolution:=optional" ::
+      "org.apache.tools.ant.*;resolution:=optional" ::
+      "*" ::
+      Nil
+    override lazy val bndDynamicImportPackage =
+      "*" ::
+      Nil
+    override lazy val bndRequireBundle =
+      "%s;bundle-version=%s".format(scalaLibraryProject.bndBundleSymbolicName, projectVersion.value) ::
+      Nil
+    override lazy val bndClasspath = Path fromFile buildScalaInstance.compilerJar
   }
 }
 
