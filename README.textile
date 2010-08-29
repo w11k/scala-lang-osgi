@@ -1,0 +1,13 @@
+scala-lang-osgi offers "OSGi":http://www.osgi.org bundles for "Scala":http://www.scala-lang.org/. Currently _scala-library_ and _scala-compiler_ are available as OSGi bundles, but _scala-swing_ and _scala-dbc_ will follow if needed. Just let us know!
+
+scala-lang-osgi is open source software licensed under the "SCALA LICENSE":http://www.scala-lang.org/node/146.
+
+h2. Getting scala-lang-osgi
+
+The binaries are made available in the "Scala-Tools.org Maven repository":http://scala-tools.org/repo-releases/com/weiglewilczek/scala-lang-osgi/.
+
+<pre><code><dependency>
+  <groupId>com.weiglewilczek.scala-lang-osgi</groupId>
+  <artifactId>scala-library</artifactId>
+  <version>2.8.0</version>
+</dependency></code></pre>
