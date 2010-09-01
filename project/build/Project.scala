@@ -11,7 +11,7 @@ class ScalaLangOsgiParentProject(info: ProjectInfo) extends ParentProject(info) 
   // Publishing
   override def managedStyle = ManagedStyle.Maven
   override def deliverAction = super.deliverAction dependsOn(publishLocal) // Fix for issue 99!
-  Credentials(Path.userHome / ".ivy2" / ".credentials" / ".scala-tools.org", log)
+  Credentials(Path.userHome / ".ivy2" / ".credentials", log)
   lazy val publishTo = "Scala Tools Nexus" at "http://nexus.scala-tools.org/content/repositories/releases/"
 //  lazy val publishTo = Resolver.file("Local Test Repository", Path fileProperty "java.io.tmpdir" asFile)
 
