@@ -6,6 +6,14 @@ h2. Getting scala-lang-osgi
 
 The binaries are made available in the "Scala-Tools.org Maven repository":http://scala-tools.org/repo-releases/com/weiglewilczek/scala-lang-osgi/.
 
+h3. For SBT
+
+<pre><code>val scalaLibraryOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-library" % "2.8.0"
+val scalaCompilerOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-compiler" % "2.8.0
+</code></pre>
+
+h3. For Maven
+
 <pre><code><dependency>
   <groupId>com.weiglewilczek.scala-lang-osgi</groupId>
   <artifactId>scala-library</artifactId>
