@@ -61,7 +61,7 @@ abstract class ScalaLangOsgiBaseProject(info: ProjectInfo) extends DefaultProjec
 
   override lazy val bndBundleSymbolicName   = normalizedName
   override lazy val bndBundleName           = "OSGi-fied %s" format bndBundleSymbolicName
-  override lazy val bndExecutionEnvironment = Set(ExecutionEnvironments.Java5, ExecutionEnvironments.Java6)
+  override lazy val bndExecutionEnvironment = Set(ExecutionEnvironment.Java5, ExecutionEnvironment.Java6)
   override lazy val bndBundleVendor         = Some("Weigle Wilczek GmbH")
   override lazy val bndBundleLicense        = Some("SCALA LICENSE (http://www.scala-lang.org/node/146)")
   override lazy val bndVersionPolicy        = Some("[$(@),$(@)]")
