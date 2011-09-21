@@ -8,8 +8,8 @@ The binaries are made available in the "Scala-Tools.org Maven repository":http:/
 
 h3. For SBT
 
-<pre><code>val scalaLibraryOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-library" % "2.9.0-1"
-val scalaCompilerOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-compiler" % "2.9.0-1"
+<pre><code>val scalaLibraryOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-library" % "2.9.1"
+val scalaCompilerOSGi = "com.weiglewilczek.scala-lang-osgi" % "scala-compiler" % "2.9.1"
 </code></pre>
 
 h3. For Maven
@@ -17,5 +17,5 @@ h3. For Maven
 <pre><code><dependency>
   <groupId>com.weiglewilczek.scala-lang-osgi</groupId>
   <artifactId>scala-library</artifactId>
-  <version>2.9.0-1</version>
+  <version>2.9.1</version>
 </dependency></code></pre>
